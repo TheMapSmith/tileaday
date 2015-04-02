@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#f2f0ce">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">0,20,2</Parameter>
+  <Parameter name="format">png8:m=h:c=128</Parameter>
+  <Parameter name="maxzoom">21</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="name"><![CDATA[3]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v5]]></Parameter>
+</Parameters>
+
+
+<Style name="landcover" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'snow')</Filter>
+    <PolygonSymbolizer fill="#ffffff" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#e0cfb2" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#cead95" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'scrub')</Filter>
+    <PolygonSymbolizer fill="#b3a58a" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#735a45" />
+  </Rule>
+</Style>
+<Layer name="landcover"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landcover</StyleName>  </Layer>
+
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="contour"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="hillshade" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'highlight') and ([level] = 56)</Filter>
+    <PolygonSymbolizer fill="#aaaaaa" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'highlight') and ([level] = 67)</Filter>
+    <PolygonSymbolizer fill="#bbbbbb" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'highlight') and ([level] = 78)</Filter>
+    <PolygonSymbolizer fill="#cccccc" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'highlight') and ([level] = 89)</Filter>
+    <PolygonSymbolizer fill="#dddddd" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'highlight') and ([level] = 90)</Filter>
+    <PolygonSymbolizer fill="#eeeeee" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'highlight') and ([level] = 94)</Filter>
+    <PolygonSymbolizer fill="#ffffff" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'shadow') and ([level] = 56)</Filter>
+    <PolygonSymbolizer fill="#555555" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'shadow') and ([level] = 67)</Filter>
+    <PolygonSymbolizer fill="#444444" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'shadow') and ([level] = 78)</Filter>
+    <PolygonSymbolizer fill="#333333" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'shadow') and ([level] = 89)</Filter>
+    <PolygonSymbolizer fill="#222222" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'shadow') and ([level] = 90)</Filter>
+    <PolygonSymbolizer fill="#111111" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'shadow') and ([level] = 94)</Filter>
+    <PolygonSymbolizer fill="#000000" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'highlight')</Filter>
+    <PolygonSymbolizer fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer fill-opacity="0.5" />
+  </Rule>
+</Style>
+<Layer name="hillshade"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>hillshade</StyleName>  </Layer>
+
+<Layer name="waterway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="water" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#a64f3c" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>  </Layer>
+
+<Layer name="aeroway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="barrier_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="building"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="landuse_overlay" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#a64f3c" />
+  </Rule>
+</Style>
+<Layer name="landuse_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse_overlay</StyleName>  </Layer>
+
+<Style name="tunnel-fill" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1.5" stroke="#f2f0ce" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Style name="tunnel-case" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="3" stroke="#735a45" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="tunnel"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tunnel-case</StyleName>
+    <StyleName>tunnel-fill</StyleName>  </Layer>
+
+<Style name="road-fill" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1.5" stroke="#f2f0ce" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Style name="road-case" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="3" stroke="#735a45" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="road"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road-case</StyleName>
+    <StyleName>road-fill</StyleName>  </Layer>
+
+<Style name="bridge-fill" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1.5" stroke="#f2f0ce" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Style name="bridge-case" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="3" stroke="#735a45" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="bridge"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bridge-case</StyleName>
+    <StyleName>bridge-fill</StyleName>  </Layer>
+
+<Style name="admin" filter-mode="first">
+  <Rule>
+    <Filter>([admin_level] = 4)</Filter>
+    <LineSymbolizer stroke="#ffffff" stroke-width="3" stroke-opacity="0.25" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([admin_level] = 2)</Filter>
+    <LineSymbolizer stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-opacity="0.75" />
+  </Rule>
+</Style>
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>admin</StyleName>  </Layer>
+
+<Layer name="country_label_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="marine_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="state_label" filter-mode="first">
+  <Rule>
+    <TextSymbolizer face-name="Market Offc Pro Bold" size="19" fill="#f2f0ce" halo-fill="#a64f3c" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="state_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>state_label</StyleName>  </Layer>
+
+<Style name="place_label" filter-mode="first">
+  <Rule>
+    <TextSymbolizer face-name="Providence Offc Pro Italic" size="10" fill="#735a45" halo-fill="#f2f0ce" halo-radius="1" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="place_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>place_label</StyleName>  </Layer>
+
+<Layer name="water_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="poi_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="road_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="waterway_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="housenum_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="contour"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+</Map>
