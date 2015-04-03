@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#302e2a">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-43.2096,-22.9111,12</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="name"><![CDATA[4]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5]]></Parameter>
+</Parameters>
+
+
+<Style name="landcover" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="landcover"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landcover</StyleName>  </Layer>
+
+<Style name="hillshade" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'full_highlight')</Filter>
+    <PolygonSymbolizer fill="#c1c0bf" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'medium_highlight')</Filter>
+    <PolygonSymbolizer fill="#cbb00b" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'medium_shadow')</Filter>
+    <PolygonSymbolizer fill="#645920" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'full_shadow')</Filter>
+    <PolygonSymbolizer fill="#302e2a" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="hillshade"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>hillshade</StyleName>  </Layer>
+
+<Style name="contour" filter-mode="first">
+  <Rule>
+    <Filter>([index] = 2) and ([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#fff9ae" stroke-width="1" stroke-opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([index] = 2) and ([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#fff9ae" stroke-width="1" stroke-opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([index] = 2)</Filter>
+    <LineSymbolizer stroke="#fff9ae" stroke-width="1" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([index] = 5) and ([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#fff9ae" stroke-width="2" stroke-opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([index] = 5) and ([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#fff9ae" stroke-width="2" stroke-opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([index] = 5)</Filter>
+    <LineSymbolizer stroke="#fff9ae" stroke-width="2" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([index] = 10) and ([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#fff9ae" stroke-width="4" stroke-opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([index] = 10) and ([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#fff9ae" stroke-width="4" stroke-opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([index] = 10)</Filter>
+    <LineSymbolizer stroke="#fff9ae" stroke-width="4" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="contour"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>contour</StyleName>  </Layer>
+
+<Style name="landuse" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'cemetery')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse</StyleName>  </Layer>
+
+<Style name="waterway" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#a6d8d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#a6d8d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke="#a6d8d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="waterway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>waterway</StyleName>  </Layer>
+
+<Style name="water" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#a6d8d4" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#a6d8d4" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer fill="#a6d8d4" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>  </Layer>
+
+<Style name="aeroway" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke-width="2" stroke="#ffdb00" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke-width="2" stroke="#ffdb00" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke-width="2" stroke="#ffdb00" stroke-opacity="0.5" />
+  </Rule>
+</Style>
+<Layer name="aeroway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>aeroway</StyleName>  </Layer>
+
+<Style name="barrier_line" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="barrier_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>barrier_line</StyleName>  </Layer>
+
+<Style name="building" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="building"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building</StyleName>  </Layer>
+
+<Style name="landuse_overlay" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="landuse_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse_overlay</StyleName>  </Layer>
+
+<Style name="tunnel-fill" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#ffdb00" stroke-width="3" />
+  </Rule>
+</Style>
+<Style name="tunnel-case" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#302e2a" stroke-width="5" stroke-dasharray="2, 2" />
+  </Rule>
+</Style>
+<Style name="tunnel" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="tunnel"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tunnel</StyleName>
+    <StyleName>tunnel-case</StyleName>
+    <StyleName>tunnel-fill</StyleName>  </Layer>
+
+<Style name="road" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#f1f1f1" stroke-gamma="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#ffdb00" stroke-width="3" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="road"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road</StyleName>  </Layer>
+
+<Style name="bridge-fill" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#ffdb00" stroke-width="3" />
+  </Rule>
+</Style>
+<Style name="bridge-case" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#302e2a" stroke-width="5" />
+  </Rule>
+</Style>
+<Style name="bridge" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="bridge"
+  group-by="layer"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bridge</StyleName>
+    <StyleName>bridge-case</StyleName>
+    <StyleName>bridge-fill</StyleName>  </Layer>
+
+<Style name="admin" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>admin</StyleName>  </Layer>
+
+<Style name="country_label_line" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="country_label_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>country_label_line</StyleName>  </Layer>
+
+<Style name="country_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="country_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>country_label</StyleName>  </Layer>
+
+<Style name="marine_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="marine_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>marine_label</StyleName>  </Layer>
+
+<Style name="state_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="state_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>state_label</StyleName>  </Layer>
+
+<Style name="place_label" filter-mode="first">
+  <Rule>
+    <Filter>([name] = 'Rio de Janeiro') and ([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <TextSymbolizer face-name="Brokenscript Rough OT Bold" size="18" fill="#302e2a" halo-fill="#fff9ae" halo-radius="2" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([name] = 'Rio de Janeiro') and ([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <TextSymbolizer face-name="Brokenscript Rough OT Bold" size="18" fill="#302e2a" halo-fill="#fff9ae" halo-radius="2" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([name] = 'Rio de Janeiro')</Filter>
+    <TextSymbolizer face-name="Brokenscript Rough OT Bold" size="18" fill="#302e2a" halo-fill="#fff9ae" halo-radius="2" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="place_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>place_label</StyleName>  </Layer>
+
+<Style name="water_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="water_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water_label</StyleName>  </Layer>
+
+<Style name="poi_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="poi_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>poi_label</StyleName>  </Layer>
+
+<Style name="road_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="road_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road_label</StyleName>  </Layer>
+
+<Style name="waterway_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="waterway_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>waterway_label</StyleName>  </Layer>
+
+<Style name="housenum_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#fff9ae" fill-opacity="0.5" />
+    <LineSymbolizer stroke="#807d57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="housenum_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>housenum_label</StyleName>  </Layer>
+
+</Map>
