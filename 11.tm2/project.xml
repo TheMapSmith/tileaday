@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#ebf2f2">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85,180,85</Parameter>
+  <Parameter name="center">-66.9176,10.5117,16</Parameter>
+  <Parameter name="format">png8:m=h:c=64</Parameter>
+  <Parameter name="maxzoom">19</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="name"><![CDATA[11]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v5]]></Parameter>
+</Parameters>
+
+
+<Layer name="landcover"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="landuse-dkred" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'school')</Filter>
+    <PolygonSymbolizer fill="#bf1736" fill-opacity="0.25" geometry-transform="skewX(-1.2), skewY(-1.2)" />
+    <MarkersSymbolizer file="src/school-18.svg" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#600c1b" fill-opacity="0.25" geometry-transform="skewX(2), skewY(2)" />
+    <MarkersSymbolizer file="src/parking-18.svg" fill="#bf1736" geometry-transform="skewY(25)" placement="interior" allow-overlap="true" opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#bf1736" fill-opacity="0.25" geometry-transform="skewY(-4), skewX(4)" />
+    <MarkersSymbolizer file="src/park-18.svg" fill="#bf1736" geometry-transform="skewY(25)" placement="interior" allow-overlap="true" opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="landuse-red" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'school')</Filter>
+    <PolygonSymbolizer fill="#bf1725" fill-opacity="0.5" />
+    <MarkersSymbolizer file="src/school-18.svg" fill="#04bfbf" geometry-transform="skewY(-1.5)" placement="interior" allow-overlap="true" opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#600c13" fill-opacity="0.5" geometry-transform="skewY(1.2), skewX(1.2)" />
+    <MarkersSymbolizer file="src/parking-18.svg" fill="#bf1725" geometry-transform="skewY(1.5)" placement="interior" allow-overlap="true" opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#bf1725" fill-opacity="0.5" geometry-transform="skewY(2), skewX(-2)" />
+    <MarkersSymbolizer file="src/park-18.svg" fill="#bf1725" geometry-transform="skewY(1.5)" placement="interior" allow-overlap="true" opacity="0.5" />
+  </Rule>
+</Style>
+<Style name="landuse-dkblue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'school')</Filter>
+    <PolygonSymbolizer fill="#04bfbf" fill-opacity="0.25" geometry-transform="skewX(2), skewY(2)" />
+    <MarkersSymbolizer file="src/school-18.svg" fill="#04bfbf" geometry-transform="skewY(-1.5)" placement="interior" allow-overlap="true" opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#026060" fill-opacity="0.25" geometry-transform="skewX(-1.2), skewY(-1.2)" />
+    <MarkersSymbolizer file="src/parking-18.svg" fill="#04bfbf" geometry-transform="skewY(-1.5)" placement="interior" allow-overlap="true" opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#04bfbf" fill-opacity="0.25" geometry-transform="skewY(2), skewX(2)" />
+    <MarkersSymbolizer file="src/park-18.svg" fill="#04bfbf" geometry-transform="skewY(-1.5)" placement="interior" allow-overlap="true" opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="landuse-blue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'school')</Filter>
+    <PolygonSymbolizer fill="#04adbf" fill-opacity="0.5" geometry-transform="skewX(1.2), skewY(1.2)" />
+    <MarkersSymbolizer file="src/school-18.svg" placement="interior" allow-overlap="true" fill="#04adbf" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#025760" fill-opacity="0.5" />
+    <MarkersSymbolizer file="src/parking-18.svg" placement="interior" allow-overlap="true" fill="#04adbf" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#04adbf" fill-opacity="0.5" />
+    <MarkersSymbolizer file="src/park-18.svg" fill="#04adbf" placement="interior" allow-overlap="true" />
+  </Rule>
+</Style>
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse-blue</StyleName>
+    <StyleName>landuse-dkblue</StyleName>
+    <StyleName>landuse-red</StyleName>
+    <StyleName>landuse-dkred</StyleName>  </Layer>
+
+<Layer name="contour"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="hillshade"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="waterway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="aeroway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="barrier_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="building-dkblue" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#04bfbf" fill-opacity="0.25" geometry-transform="skewX(-2), skewY(-2)" />
+  </Rule>
+</Style>
+<Style name="building-blue" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#04adbf" fill-opacity="0.5" geometry-transform="skewY(-1.2), skewX(-1.2)" />
+  </Rule>
+</Style>
+<Style name="building-dkred" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#bf1736" fill-opacity="0.25" geometry-transform="skewY(1.5), skewX(1.5)" />
+  </Rule>
+</Style>
+<Style name="building-red" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#bf1725" fill-opacity="0.5" />
+  </Rule>
+</Style>
+<Layer name="building"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building-red</StyleName>
+    <StyleName>building-dkred</StyleName>
+    <StyleName>building-blue</StyleName>
+    <StyleName>building-dkblue</StyleName>  </Layer>
+
+<Layer name="landuse_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="tunnel-dkblue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04bfbf" geometry-transform="skewY(2)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04bfbf" geometry-transform="skewY(2)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#04bfbf" geometry-transform="skewY(-2)" stroke-opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="tunnel-blue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04adbf" geometry-transform="skewY(1)" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04adbf" geometry-transform="skewY(1)" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#04adbf" geometry-transform="skewY(-1.2)" stroke-opacity="0.5" />
+  </Rule>
+</Style>
+<Style name="tunnel-dkred" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1736" geometry-transform="skewY(-1)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1736" geometry-transform="skewY(-1)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#bf1736" geometry-transform="skewY(1.2)" stroke-opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="tunnel-red" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+</Style>
+<Layer name="tunnel"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tunnel-red</StyleName>
+    <StyleName>tunnel-dkred</StyleName>
+    <StyleName>tunnel-blue</StyleName>
+    <StyleName>tunnel-dkblue</StyleName>  </Layer>
+
+<Style name="road-dkblue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04bfbf" geometry-transform="skewY(2)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04bfbf" geometry-transform="skewY(2)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#04bfbf" geometry-transform="skewY(-2)" stroke-opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="road-blue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04adbf" geometry-transform="skewY(1)" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04adbf" geometry-transform="skewY(1)" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#04adbf" geometry-transform="skewY(-1.2)" stroke-opacity="0.5" />
+  </Rule>
+</Style>
+<Style name="road-dkred" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1736" geometry-transform="skewY(-1)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1736" geometry-transform="skewY(-1)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#bf1736" geometry-transform="skewY(1.2)" stroke-opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="road-red" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+</Style>
+<Layer name="road"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road-red</StyleName>
+    <StyleName>road-dkred</StyleName>
+    <StyleName>road-blue</StyleName>
+    <StyleName>road-dkblue</StyleName>  </Layer>
+
+<Style name="bridge-dkblue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04bfbf" geometry-transform="skewY(2)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04bfbf" geometry-transform="skewY(2)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#04bfbf" geometry-transform="skewY(-2)" stroke-opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="bridge-blue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04adbf" geometry-transform="skewY(1)" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#04adbf" geometry-transform="skewY(1)" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#04adbf" geometry-transform="skewY(-1.2)" stroke-opacity="0.5" />
+  </Rule>
+</Style>
+<Style name="bridge-dkred" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1736" geometry-transform="skewY(-1)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1736" geometry-transform="skewY(-1)" stroke-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#bf1736" geometry-transform="skewY(1.2)" stroke-opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="bridge-red" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#bf1725" stroke-opacity="0.5" />
+  </Rule>
+</Style>
+<Layer name="bridge"
+  group-by="layer"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bridge-red</StyleName>
+    <StyleName>bridge-dkred</StyleName>
+    <StyleName>bridge-blue</StyleName>
+    <StyleName>bridge-dkblue</StyleName>  </Layer>
+
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="marine_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="state_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="place_label" filter-mode="first">
+  <Rule>
+    <TextSymbolizer face-name="Komika Title - Paint Regular" fill="#ebf2f2" size="25" allow-overlap="true" dy="35" orientation="15" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="place_label-halo3" filter-mode="first">
+  <Rule>
+    <TextSymbolizer face-name="Komika Title - Paint Regular" fill="#ebf2f2" opacity="0.25" halo-fill="#bf1736" halo-radius="5" halo-opacity="0.25" size="25" allow-overlap="true" dy="35" orientation="20" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="place_label-halo2" filter-mode="first">
+  <Rule>
+    <TextSymbolizer face-name="Komika Title - Paint Regular" fill="#ebf2f2" opacity="0.85" halo-fill="#bf1725" halo-radius="5" halo-opacity="0.5" size="25" allow-overlap="true" dy="35" orientation="15" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="place_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>place_label-halo2</StyleName>
+    <StyleName>place_label-halo3</StyleName>
+    <StyleName>place_label</StyleName>  </Layer>
+
+<Layer name="water_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="poi_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="road_label-blue" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'main') and ([osm_id].match('.*[56789]'))</Filter>
+    <TextSymbolizer face-name="Komika Parch Regular" fill="#04adbf" placement="line" comp-op="darken" halo-fill="#ebf2f2" halo-radius="2" halo-opacity="0.75" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="road_label-red" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'main') and ([osm_id].match('.*[01234]'))</Filter>
+    <TextSymbolizer face-name="Komika Parch Regular" fill="#bf1725" placement="line" comp-op="darken" halo-fill="#ebf2f2" halo-radius="2" halo-opacity="0.75" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="road_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road_label-red</StyleName>
+    <StyleName>road_label-blue</StyleName>  </Layer>
+
+<Layer name="waterway_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="housenum_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="contour"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+</Map>
