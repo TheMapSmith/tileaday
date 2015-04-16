@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#f9d5a8">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-5.9329,54.5983,16</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5]]></Parameter>
+</Parameters>
+
+
+<Layer name="landcover"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="hillshade"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="contour"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="landuse" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#f2a649" comp-op="multiply" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#f2a649" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#f2a649" comp-op="screen" />
+  </Rule>
+</Style>
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse</StyleName>  </Layer>
+
+<Style name="waterway" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#03318c" />
+  </Rule>
+</Style>
+<Layer name="waterway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>waterway</StyleName>  </Layer>
+
+<Style name="water" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#03318c" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>  </Layer>
+
+<Layer name="aeroway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="barrier_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="building" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#d94423" />
+    <LineSymbolizer stroke="#f9d5a8" />
+  </Rule>
+</Style>
+<Layer name="building"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building</StyleName>  </Layer>
+
+<Layer name="landuse_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="tunnel-fill" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="3" />
+  </Rule>
+</Style>
+<Style name="tunnel-case" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="2" stroke-dasharray="1, 1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="2" stroke-dasharray="1, 1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="4" stroke-dasharray="3, 3" />
+  </Rule>
+</Style>
+<Style name="tunnel" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'path')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-dasharray="1, 2" comp-op="screen" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'service')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-dasharray="3, 2" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="tunnel"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tunnel</StyleName>
+    <StyleName>tunnel-case</StyleName>
+    <StyleName>tunnel-fill</StyleName>  </Layer>
+
+<Style name="road-fill" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="3" />
+  </Rule>
+</Style>
+<Style name="road-case" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="2" stroke-dasharray="1, 1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="2" stroke-dasharray="1, 1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="4" stroke-dasharray="3, 3" />
+  </Rule>
+</Style>
+<Style name="road" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'path')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-dasharray="1, 2" comp-op="screen" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'service')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-dasharray="3, 2" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="road"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road</StyleName>
+    <StyleName>road-case</StyleName>
+    <StyleName>road-fill</StyleName>  </Layer>
+
+<Style name="bridge-fill" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#f9d5a8" stroke-width="3" />
+  </Rule>
+</Style>
+<Style name="bridge-case" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="2" stroke-dasharray="1, 1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="2" stroke-dasharray="1, 1" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-width="4" stroke-dasharray="3, 3" />
+  </Rule>
+</Style>
+<Style name="bridge" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'path')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-dasharray="1, 2" comp-op="screen" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'service')</Filter>
+    <LineSymbolizer stroke="#f2a649" stroke-dasharray="3, 2" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="bridge"
+  group-by="layer"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bridge</StyleName>
+    <StyleName>bridge-case</StyleName>
+    <StyleName>bridge-fill</StyleName>  </Layer>
+
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="marine_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="state_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="place_label" filter-mode="first">
+  <Rule>
+    <TextSymbolizer face-name="Marselis Slab Offc Pro Black" size="35" allow-overlap="true" fill="#03318c" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="place_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>place_label</StyleName>  </Layer>
+
+<Layer name="water_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="poi_label" filter-mode="first">
+  <Rule>
+    <Filter>([scalerank] = 4)</Filter>
+    <MarkersSymbolizer width="6" fill="#03318c" stroke="#f9d5a8" stroke-width="1.5" />
+    <TextSymbolizer face-name="Netto Offc Pro Regular" size="7" fill="#03318c" halo-fill="#f9d5a8" halo-radius="1" avoid-edges="true" text-transform="lowercase" wrap-width="80" placement-type="simple" line-spacing="-8" placements="NE, SE, NW, SW" dx="5" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([scalerank] = 3)</Filter>
+    <MarkersSymbolizer width="8" fill="#03318c" stroke="#f9d5a8" stroke-width="2" />
+    <TextSymbolizer face-name="Netto Offc Pro Regular" size="10" fill="#03318c" halo-fill="#f9d5a8" halo-radius="2" avoid-edges="true" text-transform="lowercase" wrap-width="80" placement-type="simple" line-spacing="-8" placements="NE, SE, NW, SW" dx="5" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="poi_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>poi_label</StyleName>  </Layer>
+
+<Style name="road_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <TextSymbolizer face-name="Marselis Slab Offc Pro Light Italic" fill="#021f59" size="8" halo-fill="#f2a649" halo-radius="0.375" placement="line" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <TextSymbolizer face-name="Marselis Slab Offc Pro Regular" fill="#021f59" size="12" halo-fill="#f2a649" halo-radius="0.5" placement="line" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="road_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road_label</StyleName>  </Layer>
+
+<Layer name="waterway_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="housenum_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+</Map>
