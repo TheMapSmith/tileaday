@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#f2e5bd">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-9.1411,38.7173,16</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v6]]></Parameter>
+</Parameters>
+
+
+<Layer name="landcover"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="hillshade"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="contour"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="landuse" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#b6753c" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#f29c50" fill-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'cemetery')</Filter>
+    <PolygonSymbolizer fill="#f29c50" fill-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="#f29c50" fill-opacity="0.75" />
+  </Rule>
+</Style>
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse</StyleName>  </Layer>
+
+<Layer name="waterway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="water" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#8097a6" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>  </Layer>
+
+<Layer name="aeroway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="barrier_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="building" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#f24535" fill-opacity="0.25" />
+    <LineSymbolizer stroke="#f2e5bd" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="building"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building</StyleName>  </Layer>
+
+<Layer name="landuse_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="tunnel" filter-mode="first">
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'path')</Filter>
+    <LineSymbolizer stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="tunnel"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tunnel</StyleName>  </Layer>
+
+<Style name="road" filter-mode="first">
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'path')</Filter>
+    <LineSymbolizer stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="road"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road</StyleName>  </Layer>
+
+<Style name="bridge" filter-mode="first">
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'steps')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'path')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway') and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'major_rail')</Filter>
+    <LineSymbolizer stroke="#4f6471" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'path')</Filter>
+    <LineSymbolizer stroke="#f29c50" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke="#f24535" stroke-width="1.5" stroke-opacity="0.75" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#f24535" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#8c111b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="bridge"
+  group-by="layer"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bridge</StyleName>  </Layer>
+
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="marine_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="state_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="place_label" filter-mode="first">
+  <Rule>
+    <Filter>([name_en] = 'Lisbon')</Filter>
+    <TextSymbolizer face-name="Roboto Bold Condensed" size="35" fill="#455662" halo-fill="#f2e5bd" halo-radius="2" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="place_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>place_label</StyleName>  </Layer>
+
+<Layer name="water_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="poi_label-label" filter-mode="first">
+  <Rule>
+    <Filter>([maki] != null) and ([maki] != 'marker') and ([localrank] &gt;= 3)</Filter>
+    <TextSymbolizer face-name="Roboto Italic" fill="#8c111b" opacity="0.5" size="5" halo-fill="#f2e5bd" halo-radius="0.5" wrap-width="20" dy="7" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([maki] != null) and ([maki] != 'marker') and ([localrank] = 2)</Filter>
+    <TextSymbolizer face-name="Roboto Italic" fill="#8c111b" size="6" halo-fill="#f2e5bd" halo-radius="0.5" wrap-width="20" dy="7" allow-overlap="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([maki] != null) and ([maki] != 'marker') and ([localrank] = 1)</Filter>
+    <TextSymbolizer face-name="Roboto Italic" fill="#8c111b" size="8" halo-fill="#f2e5bd" halo-radius="0.5" dy="8" allow-overlap="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="poi_label-marker" filter-mode="first">
+  <Rule>
+    <Filter>([maki] != 'marker') and ([localrank] &gt;= 3)</Filter>
+    <MarkersSymbolizer file="src/[maki]-12.svg" fill="#8c111b" opacity="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([maki] != 'marker') and ([localrank] = 2)</Filter>
+    <MarkersSymbolizer file="src/[maki]-18.svg" fill="#8c111b" />
+  </Rule>
+  <Rule>
+    <Filter>([maki] != 'marker') and ([localrank] = 1)</Filter>
+    <MarkersSymbolizer file="src/[maki]-24.svg" fill="#8c111b" />
+  </Rule>
+</Style>
+<Layer name="poi_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>poi_label-marker</StyleName>
+    <StyleName>poi_label-label</StyleName>  </Layer>
+
+<Style name="road_label" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'main')</Filter>
+    <TextSymbolizer face-name="Roboto Italic" placement="line" fill="#f2e5bd" halo-fill="#8c111b" halo-radius="0.5" avoid-edges="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="road_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road_label</StyleName>  </Layer>
+
+<Layer name="waterway_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="housenum_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+</Map>
